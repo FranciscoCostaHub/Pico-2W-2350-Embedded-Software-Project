@@ -4,7 +4,7 @@
 # Pico 2W Dynamic LED Patterns
 Bare-metal C firmware for Raspberry Pi Pico 2W featuring mathematically-generated LED timing patterns including sinusoidal breathing, acceleration curves, heartbeat simulation, Morse code, and pseudo-random sequences.
 
-## Features
+# Features
 
 - Sinusoidal breathing effect using wave generation
 - Dynamic acceleration and deceleration patterns
@@ -13,26 +13,26 @@ Bare-metal C firmware for Raspberry Pi Pico 2W featuring mathematically-generate
 - Pseudo-random timing sequences
 - Direct CYW43 HAL control without RTOS
 
-## Tech Stack
+# Tech Stack
 
 - MCU: RP2350 (ARM Cortex-M33)
 - Toolchain: arm-none-eabi-gcc 13.2.1
 - Build System: CMake + Make
 - SDK: Pico SDK 2.2.0
 
-## Quick Start
+# Quick Start
 
-# Setup
+## Setup
 Install dependencies
 sudo apt install cmake gcc-arm-none-eabi ninja-build git
 
-# Clone SDK
+## Clone SDK
 cd ~
 git clone https://github.com/raspberrypi/pico-sdk.git
 cd pico-sdk
 git submodule update --init --recursive
 
-# Set environment variable
+## Set environment variable
 echo 'export PICO_SDK_PATH=~/pico-sdk' >> ~/.bashrc
 source ~/.bashrc
 
@@ -41,11 +41,11 @@ mkdir build && cd build
 cmake ..
 make
 
-# Flash to device (hold BOOTSEL button, connect USB, then release)
+## Flash to device (hold BOOTSEL button, connect USB, then release)
 cp led_patterns.uf2 /media/$USER/RPI-RP2/
 
 
-## Project Structure
+# Project Structure
 
 .
 ├── CMakeLists.txt
@@ -54,13 +54,13 @@ cp led_patterns.uf2 /media/$USER/RPI-RP2/
 └── build/
 
 
-## Performance
+# Performance
 
 - Binary Size: ~80KB
 - RAM Usage: <4KB
 - Build Time: 10-60 seconds
 
-## Learning Outcomes
+# Learning Outcomes
 
 - Bare-metal embedded C programming
 - Cross-compilation for ARM Cortex-M architecture
