@@ -45,7 +45,7 @@ cmake ..
 make
 
 ## Flash to device (hold BOOTSEL button, connect USB, then release)
-cp led_patterns.uf2 /media/$USER/RPI-RP2/
+cp smart_blink.uf2 /media/$USER/RPI-RP2/
 
 
 # Project Structure
@@ -53,7 +53,7 @@ cp led_patterns.uf2 /media/$USER/RPI-RP2/
 .
 ├── CMakeLists.txt
 ├── pico_sdk_import.cmake
-├── main.c
+├── smart_blink.c
 └── build/
 
 
